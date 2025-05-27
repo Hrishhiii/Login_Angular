@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+// body {
+//   background-image: url('/assets/blue-dgmxybg4kb7eab7x.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   min-height: 100vh;
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 10px;    
+  min-height: 100vh;   
+  
+}
+
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Form Controls */
+input, button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input:focus, button:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Button Styles */
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Error Message */
+.alert-danger {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
