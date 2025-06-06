@@ -134,7 +134,7 @@ import { filter } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [RouterOutlet], // or any necessary modules like RouterOutlet
+  imports: [RouterOutlet], //necessary modules 
 })
 export class AppComponent {
   isSignupRoute: boolean = false;

@@ -1,0 +1,24 @@
+<h3>Responsibilities</h3>
+
+<div class="Projects bg-red-100">
+  <h4 (click)="openPopup('On-Going Projects')">On-Going Projects</h4>
+</div>
+
+<div class="Tasks">
+  <h4 (click)="openPopup('Tasks')">Tasks</h4>
+</div>
+
+<div class="Leaves">
+  <h4 (click)="openPopup('Leave Management')">Leave Management</h4>
+</div>
+
+<!-- Popup using @if -->
+@if (popupVisible) {
+  <div class="popup-backdrop">
+    <div class="popup-box">
+      <button class="close-btn" (click)="closePopup()">X</button>
+      <h3>{{ popupTitle }}</h3>
+      <p>This is a popup for <strong>{{ popupTitle }}</strong>.</p>
+    </div>
+  </div>
+}

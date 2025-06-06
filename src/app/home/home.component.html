@@ -4,5 +4,21 @@
   <a routerLink="/contact" routerLinkActive="active-link">Contact</a>
 </nav>
 
-<!-- Your home page content -->
-<h2>Welcome to the Home Page</h2>
+<div class="dashboard-grid">
+  <section class="side-widget">
+    <app-side-widget></app-side-widget>
+  </section>
+
+  <section class="calendar">
+  <app-calendar></app-calendar>
+</section>
+
+
+  <section class="office-hours">
+    <app-office-hours></app-office-hours>
+  </section>
+
+  <section class="upcoming-events">
+    <app-upcoming-events></app-upcoming-events>
+  </section>
+</div>

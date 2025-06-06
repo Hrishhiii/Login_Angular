@@ -1,0 +1,53 @@
+<!-- <div class="calendar-content">
+  <div class="calendar-box">
+    <p>[Calendar goes here]</p>
+  </div>
+  <div class="holiday-box">
+    <h4>Upcoming Holidays</h4>
+    <ul>
+      <li>June 5 – World Environment Day</li>
+      <li>June 17 – Eid al-Adha</li>
+      <li>June 21 – International Yoga Day</li>
+    </ul>
+  </div>
+</div> -->
+
+<div class="calendar-content">
+ 
+  <div class="calendar-box">
+    <form [formGroup]="calendarForm">
+      <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Select Date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          placeholder="dd/mm/yyyy"
+          formControlName="selectedDate"
+          [matDatepickerFilter]="dateFilter"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </form>
+  </div>
+
+ 
+  <div class="holiday-box">
+    <h3>Holidays in {{ calendarForm.get('selectedDate')?.value | date: 'MMMM' }}</h3>
+    @if (currentMonthHolidays.length > 0) {
+      <ul class="holiday-list">
+        @for (holiday of currentMonthHolidays; track holiday.title) {
+          <li>
+            {{ holiday.date | date: 'MMMM d' }} – <strong>{{ holiday.title }}</strong>
+          </li>
+        }
+      </ul>
+    }
+
+    @else {
+      <p>No holidays this month.</p>
+    }
+  </div>
+</div>
+
+

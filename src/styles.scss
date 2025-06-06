@@ -1,34 +1,32 @@
-// body {
-//   background-image: url('/assets/blue-dgmxybg4kb7eab7x.jpg');
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   min-height: 100vh;
-// }
-
+/* Reset and box sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
+
+/* Base body and html styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Use Poppins for whole app */
   background-color: #f8f9fa;
   color: #333;
-  padding: 10px;    
-  min-height: 100vh;   
-  
-}
+  padding: 0px;
+  // min-height: 100vh;
+  // background-image: url('/assets/blue-dgmxybg4kb7eab7x.jpg');
+//   background-size: cover;
+ }
 
-
-/* Typography */
+/* Headings with bold weight */
 h1, h2, h3 {
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Form Controls */
+/* Inputs and buttons base styling */
 input, button {
   padding: 10px;
   border-radius: 6px;
@@ -36,12 +34,22 @@ input, button {
   font-size: 1rem;
 }
 
+/* Angular Material inputs, buttons, and labels font fix */
+.mat-form-field, 
+.mat-form-field-label, 
+.mat-input-element, 
+.mat-button, 
+.mat-datepicker-toggle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400;
+}
+
 input:focus, button:focus {
   outline: none;
   border-color: #007bff;
 }
 
-/* Button Styles */
+/* Button colors and hover */
 button {
   background-color: #007bff;
   color: white;
@@ -53,9 +61,10 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Error Message */
+/* Error alert text */
 .alert-danger {
   color: red;
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
+

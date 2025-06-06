@@ -3,4 +3,13 @@
   <a routerLink="/about" routerLinkActive="active-link">About</a>
   <a routerLink="/contact" routerLinkActive="active-link">Contact</a>
 </nav>
-<p>about works!</p>
+<div class="content">
+@defer(on idle) {
+  <h1>About Us</h1>
+  <p>This is the about page of our Angular application.</p>
+  <p>We are committed to providing the best user experience.</p>
+  <p>Feel free to explore our features and learn more about us.</p>
+} @loading (minimum 2s){
+  <ngx-skeleton-loader count="4" appearance="line" />
+}
+</div>

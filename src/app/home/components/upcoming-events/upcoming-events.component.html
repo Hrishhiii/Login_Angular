@@ -1,0 +1,15 @@
+<div class="event-wrapper">
+  <h3>Upcoming Events in {{ currentMonthName }}</h3>
+  @if (currentMonthEvents.length > 0) {
+    <ul class="event-list">
+      @for (event of currentMonthEvents; track event.description) {
+        <li>
+          <strong>{{ event.description }}</strong> — {{ event.date | date: 'fullDate' }}
+        </li>
+      }
+    </ul>
+  } @else {
+    <p>No events this month.</p>
+  }
+</div>
+

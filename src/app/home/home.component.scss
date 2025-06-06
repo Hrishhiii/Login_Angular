@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: #4e71ff; // decent blue
+  background-color: #C68642;
   padding: 12px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
@@ -22,4 +22,66 @@
       background-color: rgba(255, 255, 255, 0.3);
     }
   }
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch; /* Makes sure items stretch vertically */
+  gap: 20px;
+  padding: 20px;
+}
+
+.dashboard-grid section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  min-height: 200px;
+}
+
+/* Left-side section */
+.side-widget {
+  grid-row: 1 / 3;
+  height: 100%; /* Ensure it fills full grid cell */
+  min-height: 650px; /* Increase this value as needed */
+  background-color: #fff7e6;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Calendar styling */
+.calendar {
+  grid-column: 2 / -1;
+  position: relative;
+  overflow: visible; // Ensure dropdowns and popups can render outside
+  min-height: fit-content; // Allow the height to expand based on content
+  z-index: 1;
+}
+
+.calendar-view,
+.holiday-list {
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-height: 150px;
+}
+
+/* Office hours and events */
+.office-hours {
+  grid-column: 2 / span 2;
+  background-color: #f5f5f5;
+}
+
+.UpComingEvents {
+  grid-column: 4 / span 1;
+}
+
+.holiday-list{
+  margin-left: 20px;
+  padding-left: 50px;
 }
